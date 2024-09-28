@@ -19,14 +19,27 @@
         font-family: "Lexend", sans-serif;
     }
 </style>
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'donate-primary': 'rgb(180, 244, 97)',
+          }
+        }
+      }
+    }
+  </script>
 </head>
 <body class="lexend-font">
-    <header>
+    <header class="md:container mx-auto">
         <!-- navbar start -->
          <nav>
-            <div class="navbar bg-base-100">
+            <div class="navbar py-6">
                 <div class="navbar-start">
-                    <a class="btn">Blog</a>
+                    <a class="btn bg-donate-primary">Blog</a>
                 </div>
                 <div class="navbar-center">
                    <a href="#"><img src="assets/logo.png" alt=""></a>
@@ -44,6 +57,14 @@
                 </div>
               </div>
          </nav>
+
+         <!-- Horizontal menu -->
+          <div class=" flex justify-center">
+            <ul class="menu menu-horizontal space-x-4 mt-28">
+                <li><button class="btn">Donation</button></li>
+                <li><button class="btn border border-slate-300">History</button></li>
+              </ul>
+          </div>
 
     </header>
     <main>
