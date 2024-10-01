@@ -4,8 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs-Donate Bangladesh</title>
+
+    <!-- Google font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- DaisyUI + TailwindCSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .lexend-font{
+        font-family: "Lexend", sans-serif;
+      }
+
+    </style>
+
+    <script>
+    tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          clifford: '#da373d',
+          'donate-primary': 'rgb(180, 244, 97)',
+          'navbar-bg': 'rgb(249, 247, 243)',
+        }
+      }
+    }
+    }
+    </script>
 </head>
-<body>
+<body class="lexend-font">
     <header class="bg-navbar-bg sticky top-0 z-10">
 
         <!-- navbar start -->
@@ -21,6 +51,7 @@
                 </div>
 
                 <div class="navbar-end">
+                   <!-- Account Balance -->
                       <div class="stats">
                         <div class="stat flex items-center gap-3">
                             <div>
@@ -33,7 +64,7 @@
               </div>
          </nav>
 
-         <!-- Horizontal menu -->
+         <!-- User action buttons -->
           <div class=" flex justify-center">
             <ul class="menu menu-horizontal space-x-4 mt-14 md:mt-28">
                 <li><button class="btn btn-lg py-4 px-8 bg-donate-primary">Donation</button></li>
