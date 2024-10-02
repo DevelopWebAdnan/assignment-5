@@ -43,7 +43,7 @@
       <div
         class="navbar py-3 md:py-6 text-xl font-semibold flex flex-col gap-4 items-center justify-center md:flex-row">
         <div class="navbar-start">
-          <button class="btn btn-lg bg-donate-primary text-xl py-3 px-8">Blog</button>
+          <button id="button-blog" class="btn btn-lg bg-donate-primary text-xl py-3 px-8">Blog</button>
         </div>
 
         <div class="navbar-center space-x-4">
@@ -58,7 +58,7 @@
               <div>
                 <img src="assets/coin.png" alt="" class="w-5">
               </div>
-              <div id="account-balance" class="stat-title font-medium">5500 BDT</div>
+              <div class="stat-title font-medium"><span id="account-balance">5500</span> BDT</div>
             </div>
           </div>
         </div>
@@ -68,8 +68,8 @@
     <!-- features start -->
     <div class=" flex justify-center">
       <ul class="menu menu-horizontal space-x-4 mt-14 md:mt-28">
-        <li><button id="show-donation-cards" class="btn btn-lg py-4 px-8 bg-donate-primary">Donation</button></li>
-        <li><button id="show-history-section" class="btn btn-lg border border-slate-300 py-4 px-8 bg-white">History</button></li>
+        <li><button id="show-donation-cards" class="btn btn-lg py-4 px-8 border-slate-300 bg-white active:bg-donate-primary">Donation</button></li>
+        <li><button id="show-history-section" class="btn btn-lg border border-slate-300 py-4 px-8 bg-white active:bg-donate-primary">History</button></li>
       </ul>
     </div>
     <!-- features end -->
@@ -96,7 +96,7 @@
                   <div>
                     <img src="assets/coin.png" alt="" class="w-4">
                   </div>
-                  <div id="current-donation-amount" class="stat-title">0 BDT</div>
+                  <div class="stat-title"><span id="current-donation-amount">0</span> BDT</div>
                 </div>
               </div>
               <!-- Donation Title -->
@@ -134,7 +134,7 @@
                   <div>
                     <img src="assets/coin.png" alt="" class="w-4">
                   </div>
-                  <div id="current-donation-amount-2" class="stat-title">600 BDT</div>
+                  <div class="stat-title"><span id="current-donation-amount-2">600</span> BDT</div>
                 </div>
               </div>
               <!-- Donation Title -->
@@ -173,7 +173,7 @@
                   <div>
                     <img src="assets/coin.png" alt="" class="w-4">
                   </div>
-                  <div id="current-donation-amount-3" class="stat-title">2400 BDT</div>
+                  <div class="stat-title"><span id="current-donation-amount-3">2400</span> BDT</div>
                 </div>
               </div>
               <!-- Donation Title -->
@@ -199,21 +199,40 @@
         </div>
       </div>
 
+
       <!-- History start -->
        <div id="history-section" class="hidden">
         <div id="history-container" class="space-y-6">
 
         </div>
        </div>
-      
       <!-- History end -->
+
+      <!-- Static Modal -->
+       <!-- Open the modal using ID.showModal() method -->
+        <dialog id="modal_success" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box text-center">
+            <h3 class="text-4xl font-bold">Congrats!</h3>
+            <div class="flex justify-center">
+              <img src="assets/coin.png" alt="" class="w-10 py-4">
+            </div>
+            <p class="py-4">You Have Donated for Humankind</p>
+            <p class="text-2xl font-bold">Successfully</p>
+            <div class="modal-action flex justify-center">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                 <button class="btn">close confirmation</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
     </section>
 
   </main>
   <script src="js/utilities.js"></script>
   <script src="js/donate.js"></script>
   <script src="js/features.js"></script>
-  <!-- <link rel="stylesheet" href=""> -->
+  <script src="js/blog.js"></script>
 </body>
 
 </html>
