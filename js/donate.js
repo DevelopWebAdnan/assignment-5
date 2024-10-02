@@ -8,8 +8,19 @@ document.getElementById('button-donate-now')
         const donationAmount = getInputFieldValueById('input-donation-amount');
         console.log('value by Donate Now button click', donationAmount);
 
+        // Input validation
+        if(isNaN(donationAmount)){
+            alert('Please provide a number');
+            return;
+        }
+
         const balance = getTextFieldValueById('account-balance');
         console.log(' balance here',  balance);
+
+        if(donationAmount > balance){
+            alert('Sorry, you do not have enough money to donate');
+            return;
+        }
 
         const newBalance = balance - donationAmount;
         // console.log('new balance:', newBalance);
@@ -51,8 +62,19 @@ document.getElementById('button-donate-now-2')
     const donationAmount2 = getInputFieldValueById('input-donation-amount-2');
     console.log(' value by Donate Now 2 button click', donationAmount2);
 
+    // Input validation
+    if(isNaN(donationAmount2)){
+        alert('Please provide a valid number');
+        return;
+    }
+
     const balance = getTextFieldValueById('account-balance');
     console.log('2nd time balance here', balance);
+
+    if(donationAmount2 > balance){
+        alert('Sorry, you do not enough money to donate');
+        return;
+    }
 
     const newBalance2 = balance - donationAmount2;
     // console.log('new balance2:', newBalance2);
@@ -66,7 +88,7 @@ document.getElementById('button-donate-now-2')
     // console.log('new current donation2', newCurrentDonation2);
 
     const donationTitle2 = document.getElementById('donated-for-2').innerText;
-    console.log(donationTitle2);
+    // console.log(donationTitle2);
 
     const div2 = document.createElement('div');
     div2.classList.add('bg-red-100');
@@ -89,8 +111,19 @@ document.getElementById('button-donate-now-3')
         const donationAmount3 = getInputFieldValueById('input-donation-amount-3');
         console.log('value by Donate now button3 click', donationAmount3);
 
+        // Input validation
+        if(isNaN(donationAmount3)){
+            alert('Please provide a number');
+            return;
+        }
+
         const balance = getTextFieldValueById('account-balance');
         console.log('3rd time balance here,', balance);
+
+        if(donationAmount3 > balance){
+            alert('Sorry! You do not have enough money to donate');
+            return;
+        }
 
         const newBalance3 = balance - donationAmount3;
         // console.log('new balance3,', newBalance3);
@@ -106,7 +139,7 @@ document.getElementById('button-donate-now-3')
         document.getElementById('current-donation-amount-3').innerText = newCurrentDonation3;
 
         const donationTitle3 = document.getElementById('donated-for-3').innerText;
-        console.log(donationTitle3);
+        // console.log(donationTitle3);
 
         const div3 = document.createElement('div');
         div3.classList.add('bg-green-100');
