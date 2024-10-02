@@ -18,11 +18,29 @@ document.getElementById('button-donate-now')
 
         const currentDonation = getTextFieldValueById('current-donation-amount');
         console.log('current donation here', currentDonation);
-
+        
         const newCurrentDonation = currentDonation + donationAmount;
         // console.log('new current donation:', newCurrentDonation);
 
+        const donationTitle = document.getElementById('donated-for').innerText;
+        // console.log(donationTitle);
+
+        const div = document.createElement('div');
+        div.classList.add('bg-yellow-100');
+        div.innerHTML = `
+        <h3 class="text-xl font-bold">${newCurrentDonation} Tk. is donated for ${donationTitle}</h3>
+        <p class="font-light">Date: ${Date()};</p>
+        `;
+
+        document.getElementById('history-container').appendChild(div);
+
+        // const p = document.createElement('p');
+        // p.innerHTML =`Date: ${Date()}`;
+        // console.log(p);
+
         document.getElementById('current-donation-amount').innerText = newCurrentDonation;
+
+        // document.getElementById('history-container').appendChild(p);
 });
 
 // Card-2
@@ -46,6 +64,18 @@ document.getElementById('button-donate-now-2')
 
     const newCurrentDonation2 = currentDonation2 + donationAmount2;
     // console.log('new current donation2', newCurrentDonation2);
+
+    const donationTitle2 = document.getElementById('donated-for-2').innerText;
+    console.log(donationTitle2);
+
+    const div2 = document.createElement('div');
+    div2.classList.add('bg-red-100');
+    div2.innerHTML = `
+    <h3 class="text-xl font-bold">${newCurrentDonation2} Tk. has been donated for ${donationTitle2}</h3>
+    <p class="font-light">Date: ${Date()};</p>
+    `;
+
+    document.getElementById('history-container').appendChild(div2);
 
     document.getElementById('current-donation-amount-2').innerText = newCurrentDonation2;
 
@@ -74,5 +104,17 @@ document.getElementById('button-donate-now-3')
         // console.log('new current donation3:', newCurrentDonation3);
 
         document.getElementById('current-donation-amount-3').innerText = newCurrentDonation3;
+
+        const donationTitle3 = document.getElementById('donated-for-3').innerText;
+        console.log(donationTitle3);
+
+        const div3 = document.createElement('div');
+        div3.classList.add('bg-green-100');
+        div3.innerHTML = `
+        <h3 class="text-xl font-bold">${newCurrentDonation3} Tk. has been donated for ${donationTitle3}</h3>
+        <p class='font-light'>Date: ${Date()}</p>
+        `;
+
+        document.getElementById('history-container').appendChild(div3);
 
 });
