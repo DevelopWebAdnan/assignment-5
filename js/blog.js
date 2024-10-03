@@ -4,6 +4,6 @@ document.getElementById('button-blog')
     .addEventListener('click', function(){
         console.log('Blog button clicked');
 
-        window.location.href = '/blog.html';
+        window.location.href = './blog.html';
 
 });
