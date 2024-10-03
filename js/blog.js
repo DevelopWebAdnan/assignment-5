@@ -1,4 +1,4 @@
-console.log('blog file added');
+// console.log('blog file added');
 
 document.getElementById('button-blog')
     .addEventListener('click', function(){
